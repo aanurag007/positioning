@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centered Button and Info Box</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #e2d6d6;
+      }
+
+      .center-button {
+        position: relative;
+        z-index: 1;
+        background-color: #ea1010;
+        height: 40px;
+        border-radius: 30%;
+      }
+
+      .info-box {
+        position: fixed;
+
+        font-size: 30px;
+        width: 50%;
+        height: 40%;
+        text-decoration-color: #070101;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ea1010;
+        border: 1px solid #070101;
+        padding: 20px;
+        display: none;
+        z-index: 2;
+      }
+
+      .center-button:active ~ .info-box {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="center-button">Read Info</button>
+    <div class="info-box">This is info</div>
+  </body>
+</html>
